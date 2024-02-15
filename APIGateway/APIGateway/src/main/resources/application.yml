@@ -1,0 +1,20 @@
+server:
+    port: 8083
+
+
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+        - id: QUIZ-SERVICE
+          uri: lb://QUIZ-SERVICE 
+          predicates:
+          - Path=/quiz/**
+    
+
+
+
+
+
+
